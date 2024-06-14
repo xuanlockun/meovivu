@@ -515,7 +515,7 @@ public class Main extends javax.swing.JFrame {
     
     private void api() {
                 try {
-            String apiKey = "ac0fd98ff0168eb3456d2d7ee3de6c73";
+            String apiKey = "api_cua_ban";
             String city = "Thu Duc, VN";
             String urlString = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
 

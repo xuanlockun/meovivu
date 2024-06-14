@@ -300,18 +300,18 @@ public class TourFormKH extends javax.swing.JPanel {
                       ResultSet rs=pst.executeQuery();
 
                   }catch(HeadlessException | SQLException e){
-                      JOptionPane.showMessageDialog(null, e);
+                      JOptionPane.showMessageDialog(null, "Bạn đã đặt quá số lượng hiện có của chuyến này");
                   }
-        try{
-                      String sqlquery = "UPDATE CHUYEN SET SOLUONGVE = SOLUONGVE - ? WHERE MACHUYEN = ?";
-                      PreparedStatement pst = data.getConnection().prepareStatement(sqlquery);
-                      pst.setString(1,SL);
-                      pst.setString(2,MACHUYEN);
-                      ResultSet rs=pst.executeQuery();
-
-                  }catch(HeadlessException | SQLException e){
-                      JOptionPane.showMessageDialog(null, e);
-                  }
+//        try{
+//                      String sqlquery = "UPDATE CHUYEN SET SOLUONGVE = SOLUONGVE - ? WHERE MACHUYEN = ?";
+//                      PreparedStatement pst = data.getConnection().prepareStatement(sqlquery);
+//                      pst.setString(1,SL);
+//                      pst.setString(2,MACHUYEN);
+//                      ResultSet rs=pst.executeQuery();
+//
+//                  }catch(HeadlessException | SQLException e){
+//                      JOptionPane.showMessageDialog(null, e);
+//                  }
         clear();
         data.fetchCHUYEN(model,"1");
         String searchString = txtMACHUYEN.getText();

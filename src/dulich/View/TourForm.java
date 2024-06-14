@@ -511,7 +511,8 @@ public class TourForm extends javax.swing.JPanel {
                       ResultSet rs=pst.executeQuery();
 
                   }catch(HeadlessException | SQLException e){
-                      JOptionPane.showMessageDialog(null, e);
+//                      JOptionPane.showMessageDialog(null, e);
+                      JOptionPane.showMessageDialog(null,"Mã chuyến đã bị trùng");
                   }
         clear();
         data.fetchCHUYEN(model,"1");
